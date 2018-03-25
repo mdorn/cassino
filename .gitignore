@@ -59,3 +59,7 @@ typings/
 
 # -------- CUSTOM
 public/dist
+*.env
+!example.env
+.DS_Store
+public/theme/sass/_extra.scss

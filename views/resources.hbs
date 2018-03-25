@@ -1,0 +1,32 @@
+<div class="row">
+{{#each resources}}
+    <div class="col-lg-3 col-sm-6">
+        <div class="card card-user">
+            <div class="image">
+                <img src="/images/merveille.jpg" alt="..."/>
+            </div>
+            <div class="content">
+                <div align="center">
+                  <a href="/"><h4 class="title">{{ name }}</a><br />
+                     <small>{{ location.address }}</small>
+                  </h4>
+                </div>
+                <p class="description text-center">
+                    {{ description }}
+                </p>
+            </div>
+            <div class="footer">
+                {{#each tags}}
+                <span class="label label-default">
+                {{this}}
+                </span>&nbsp;
+                {{/each}}
+                <hr />
+                <div class="stats">
+                    <i class="ti-timer"></i> {{ moment created "fromNow" }}
+                </div>
+            </div>
+        </div>
+    </div>
+{{/each}}
+</div>
